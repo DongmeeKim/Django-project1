@@ -1,0 +1,15 @@
+from django.conf.urls import url
+from . import views
+from . import views_cbv
+
+
+urlpatterns = [
+    url(r'^sum/(?P<numbers>[\d/]+)/$', views.mysum),  
+    url(r'^hello/(?P<name>[ㄱ-힣]+)/(?P<age>\d+)/$', views.hello),
+    url(r'list1/$', views.post_list1),
+    url(r'list2/$', views.post_list2),
+
+
+    url(r'cbv/list1/$', views_cbv.post_list1),
+    url(r'cbv/list2/$', views_cbv.post_list2),
+]
